@@ -18,8 +18,13 @@ export default class Homescreen extends Component {
                             DrawerActions.toggleDrawer(),
                           )
                         }/>
-         <Icons name='location-pin' size={15} color='#37af0c'  style={{paddingLeft:5}}/>
-         <Text style={styles.place}>Rajapalayam</Text>
+            
+        <Icons name='location-pin' size={15} color='#37af0c'onPress={() =>
+                      this.props.navigation.navigate('Location')
+                    }  style={{paddingLeft:5}}/>
+         <Text onPress={() =>
+                      this.props.navigation.navigate('Location')
+                    }  style={styles.place}>Rajapalayam </Text>
          <Icon1 style={styles.cart} name='shopping-cart' size={15} color='white'/>
       </View>
        <View style={styles.body}>
@@ -92,7 +97,6 @@ const styles = StyleSheet.create({
     color:'#37af0c',
     fontSize: 30,
     paddingLeft:8,
-    fontFamily:Poppins-Regular,
   },
   searchfield:{
     flexDirection:'row',
