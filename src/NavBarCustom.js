@@ -103,7 +103,7 @@ export function NavBarCustom(props) {
             )}
             label="Account"
             onPress={() => {
-              props.navigation.navigate('Account');
+              props.navigation.navigate('Profile');
             }}
           />
           </Drawer.Section>
