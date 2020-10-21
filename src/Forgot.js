@@ -10,7 +10,16 @@ export default class Forgot extends Component {
   render() {
         return(
             <View style={styles.container}>
-                 <Icons style={styles.icon }name="arrow-back" size={20} color='lime'/>
+                 <Icons 
+                 
+                 onPress={() =>
+                    this.props.navigation.navigate('Login')
+                  } 
+                 style={styles.icon }name="chevron-left" size={30} color='lime'/>
+
+
+
+                 
                  <Text style={styles.Forgot}>Forgot Password?</Text>
 
 
@@ -18,9 +27,10 @@ export default class Forgot extends Component {
                 <TextInput style={styles.inputBox}
             
                 onChangeText={(email) => this.setState({email})}
-                underlineColorAndroid = "#ffffff"
-                placeholder="Enter your email address" 
-                placeholderTextColor = "#ffffff"
+               
+                
+                placeholder="Enter your Email address" 
+                placeholderTextColor = "#9d9d9f"
                 selectionColor="#fff"
                 keyboardType="email-address"
                 
@@ -51,11 +61,12 @@ const styles = StyleSheet.create({
     inputBox: {
         width: 350,
         backgroundColor: '#000', 
-        paddingVertical:15,
+        paddingVertical:40,
         paddingHorizontal:15,
         fontSize: 16,
         color: '#fff',
-        marginVertical: 10,
+        marginVertical: 0,
+        marginTop:20,
         justifyContent: 'center',
         alignItems: 'center',
         
@@ -63,17 +74,17 @@ const styles = StyleSheet.create({
     button: {
         width:'90%',
         left:15,
-        backgroundColor: 'lime',
+        backgroundColor:'#30bb00',
         borderRadius: 5,
-        marginVertical: 15,
-        paddingVertical: 12,
+       
+        paddingVertical: 15,
         padding:100,
      
 
     },
   
     buttonText: {
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: '500',
         color: '#ffffff',
         textAlign: 'center'
