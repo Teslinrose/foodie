@@ -5,6 +5,8 @@ import{ ScrollView, Button,} from 'react-native';
 import Icon from 'react-native-vector-icons/EvilIcons';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import Mailicons from 'react-native-vector-icons/Entypo';
+import {DrawerActions} from '@react-navigation/native';
+
 
 export  default class Support extends Component{
     render(){
@@ -12,7 +14,11 @@ export  default class Support extends Component{
            
             <View>
                 <View style={styles.header}>
-                 <Icon style={styles.baricon } name='navicon' size={28} color='lime'/>
+                 <Icon style={styles.baricon } name='navicon' size={28} color='lime' onPress={() =>
+                          this.props.navigation.dispatch(
+                            DrawerActions.toggleDrawer(),
+                          )
+                        }/>
                  </View>
                  <View style ={styles.body}>
              <ScrollView style={styles.scrolldata} color='lime'>
