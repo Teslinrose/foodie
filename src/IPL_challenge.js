@@ -2,7 +2,7 @@ import React,{ Component } from 'react';
 
 import {View,Text,StyleSheet,Button,TouchableOpacity} from "react-native"
 import Icon from 'react-native-vector-icons/EvilIcons';
-
+import {DrawerActions} from '@react-navigation/native';
 
 
 
@@ -13,7 +13,11 @@ export default class IPL_challenge extends Component{
             <View style={styles.container}>
                 
             <View style={styles.header}>
-            <Icon name='navicon' size={30} color='lime' padding='30' />
+            <Icon name='navicon' size={30} color='lime' padding='30' onPress={() =>
+                          this.props.navigation.dispatch(
+                            DrawerActions.toggleDrawer(),
+                          )
+                        } />
                 <Text  style={styles.headertext}>Foodie IPL Challenge</Text>
             </View>
             <View style={styles.body}>
@@ -51,7 +55,8 @@ export default class IPL_challenge extends Component{
           style={styles.button}
            
         >
-          <Text style={styles.buttontext}>Subscribe</Text>
+          <Text  onPress={() =>this.props.navigation.navigate('Subscribe')} style={styles.buttontext}>Subscribe</Text>
+        
         </TouchableOpacity>
 
           
