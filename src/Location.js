@@ -41,13 +41,13 @@ export default class Location extends Component{
 
                 <View style={styles.body}> 
                     <Icon2 style={styles.lctnicon}name="location-pin" size={20} color='white'/>
-                    <Text style={styles.lctntext}>Rajapalayam</Text>
+                    <Text onPress={() =>this.props.navigation.navigate('homescreen')}  style={styles.lctntext}>Rajapalayam</Text>
                     
                 </View>
 
                 <View style={styles.body}> 
-                    <Icon2 style={styles.lctnicon}name="location-pin" size={20} color='#fdfdfe'    />
-                    <Text style={styles.lctntext}>Srivilliputtur</Text>
+                    <Icon2 style={styles.lctnicon}name="location-pin" size={20} color='white' />
+                    <Text onPress={() =>this.props.navigation.navigate('homescreen')} style={styles.lctntext}>Srivilliputtur</Text>
                     
                 </View>
 
