@@ -10,7 +10,14 @@ export default class Signin extends Component {
   render() {
         return(
             <View style={styles.container}>
-                 <Icons style={styles.personicon }name="arrow-back" size={20} color='lime'/>
+          
+          <Icons 
+                 
+                 onPress={() =>
+                    this.props.navigation.navigate('Login')
+                  } 
+                 style={styles.icon }name="chevron-left" size={30} color='lime'/>
+
                  <Text style={styles.Newuser}>New User?</Text>
 
 
@@ -18,9 +25,9 @@ export default class Signin extends Component {
                 <TextInput style={styles.inputBox}
             
                 onChangeText={(name) => this.setState({name})}
-                underlineColorAndroid = "#ffffff"
+                underlineColorAndroid = "#9d9d9f"
                 placeholder="Full Name" 
-                placeholderTextColor = "#ffffff"
+                placeholderTextColor = "#9d9d9f"
                 selectionColor="#fff"
                 keyboardType="email-address"
                 
@@ -28,10 +35,10 @@ export default class Signin extends Component {
 
 <TextInput style={styles.inputBox}
                 onChangeText={(email) => this.setState({email})} 
-                underlineColorAndroid = "#ffffff"
+                underlineColorAndroid = "#9d9d9f"
                 placeholder="Email Address"
               
-                placeholderTextColor = "#ffffff"
+                placeholderTextColor = "#9d9d9f"
                 ref={(input) => this.password = input}
                 />
 
@@ -42,11 +49,11 @@ export default class Signin extends Component {
 
 <TextInput style={styles.inputBox}
                 onChangeText={(phone) => this.setState({phone})} 
-                underlineColorAndroid = "#ffffff"
+                underlineColorAndroid = "#9d9d9f"
                 
                 placeholder="Phone Number"
                 
-                placeholderTextColor = "#ffffff"
+                placeholderTextColor = "#9d9d9f"
                 ref={(input) => this.password = input}
                 />
                 
@@ -54,10 +61,10 @@ export default class Signin extends Component {
                 <TextInput style={styles.inputBox}
                 onChangeText={(password) => this.setState({password})} 
                 
-                underlineColorAndroid = '#01fff0'
+                underlineColorAndroid = "#9d9d9f"
                 placeholder="Password"
                 secureTextEntry={true}
-                placeholderTextColor = "#ffffff"
+                placeholderTextColor = "#9d9d9f"
                 ref={(input) => this.password = input}
                 />
  
@@ -88,19 +95,20 @@ const styles = StyleSheet.create({
     inputBox: {
         width: 350,
         backgroundColor: '#000', 
-        paddingVertical:15,
-        paddingHorizontal:15,
+        paddingHorizontal:25,
         fontSize: 16,
         color: '#fff',
         marginVertical: 10,
+        marginTop:14,
         justifyContent: 'center',
         alignItems: 'center',
         
     },
     button: {
         width:'90%',
+        height:50,
         left:15,
-        backgroundColor: 'green',
+        backgroundColor:'#21680c',
         borderRadius: 5,
         marginVertical: 15,
         paddingVertical: 12,
@@ -110,9 +118,9 @@ const styles = StyleSheet.create({
     },
   
     buttonText: {
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: '500',
-        color: '#ffffff',
+        color: "#9d9d9f",
         textAlign: 'center'
     },
     Newuser: {
@@ -125,7 +133,7 @@ const styles = StyleSheet.create({
         paddingHorizontal:35
         
     },
-    personicon:{
+    icon:{
         
         marginTop:35,
         marginLeft:15,
