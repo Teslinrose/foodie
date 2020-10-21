@@ -12,7 +12,7 @@ export default class Splashscreen extends Component{
       </View>
     
       )
-  }
+    }
 }
 const styles=StyleSheet.create({
     container: {
