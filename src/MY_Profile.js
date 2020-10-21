@@ -3,6 +3,7 @@ import{View,TextInput,Text,StyleSheet} from "react-native";
 import Icon from 'react-native-vector-icons/EvilIcons';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import { color } from 'react-native-reanimated';
+import {DrawerActions} from '@react-navigation/native';
 
 export default class MY_Profile extends Component{
     render(){
@@ -11,7 +12,11 @@ export default class MY_Profile extends Component{
 
             <View>
                 <View style={styles.header}>
-                <Icon name='navicon' size={25} color='lime'/>
+                <Icon name='navicon' size={25} color='lime' onPress={() =>
+                          this.props.navigation.dispatch(
+                            DrawerActions.toggleDrawer(),
+                          )
+                        }/>
                 <Text style={styles.headertext}>My Profile </Text>
                 <Text style={styles.headertextl}>Logout</Text>
                 </View>
