@@ -51,11 +51,11 @@ export default class IPL_challenge extends Component{
 
             <View >
 
-            <TouchableOpacity
+            <TouchableOpacity onPress={() =>this.props.navigation.navigate('Subscribe')}
           style={styles.button}
            
         >
-          <Text  onPress={() =>this.props.navigation.navigate('Subscribe')} style={styles.buttontext}>Subscribe</Text>
+          <Text style={styles.buttontext}>Subscribe</Text>
         
         </TouchableOpacity>
 
