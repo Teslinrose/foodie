@@ -51,7 +51,6 @@ const styles=StyleSheet.create({
         fontSize:18,
         color:'#f5fffa',
         padding:60,
-        fontFamily: Properties.fonts.default,
  
     
     },
