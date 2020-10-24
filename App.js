@@ -14,8 +14,9 @@ import Subscribe from './src/Subscribe';
 import Signin from './src/Signin';
 import Forgot from './src/Forgot';
 import Splashscreen from './src/Splashscreen';
-import {createDrawerNavigator} from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
+import {createDrawerNavigator} from '@react-navigation/drawer';
+
 const Drawer = createDrawerNavigator();
 export default class app extends Component {
   render() {
