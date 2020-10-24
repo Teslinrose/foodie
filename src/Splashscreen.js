@@ -6,7 +6,7 @@ export default class Splashscreen extends Component{
   render(){
       return(
       <View style={styles.container}>
-        <Image  source={require('./Images/Fd.jpg')}
+        <Image  source={require('./images/Fd.jpg')}
          style={{ width: 320, height: 500 }}
         ></Image>
       </View>
