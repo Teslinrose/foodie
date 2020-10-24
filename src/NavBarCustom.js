@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,StyleSheet} from 'react-native';
+import {View} from 'react-native';
 import {Drawer,Text} from 'react-native-paper';
 import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -189,11 +189,3 @@ export function NavBarCustom(props) {
   </View> 
    );
   }  
-  // const styles = StyleSheet.create({
-  //   icon1: {
-  //     color: 'lime',
-  //     paddingLeft:50,
-  //     zIndex:5,
-     
-  //   },
-  // });
