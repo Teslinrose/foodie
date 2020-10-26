@@ -2,7 +2,7 @@ import React,{ Component } from 'react';
 
 import {View,Text,StyleSheet,Button,TouchableOpacity} from "react-native"
 import Icon from 'react-native-vector-icons/EvilIcons';
-
+import {DrawerActions} from '@react-navigation/native';
 
 
 export default class Subscribe extends Component{
@@ -12,7 +12,11 @@ export default class Subscribe extends Component{
             <View style={styles.container}>
                 
             <View style={styles.header}>
-            <Icon name='navicon' size={30} color='lime'  />
+            <Icon name='navicon' size={26} color='limegreen'onPress={() =>
+                          this.props.navigation.dispatch(
+                            DrawerActions.toggleDrawer(),
+                          )
+                        }/>
                 <Text  style={styles.headertext}>IPL Challenge </Text>
             </View>
             
