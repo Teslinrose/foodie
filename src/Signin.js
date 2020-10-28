@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import Icon from 'react-native-vector-icons/EvilIcons';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity,Dimensions } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import { DrawerActions } from '@react-navigation/native';
-import { TouchableHighlight } from 'react-native-gesture-handler';
+
  
 export default class Signin extends Component {
  
@@ -13,14 +15,12 @@ export default class Signin extends Component {
         return(
             <View style={styles.container}>
 
-<TouchableHighlight onPress={() =>
-                    this.props.navigation.navigate('Homescreen')
-                  } >
-<Icons 
-                 
-                 style={styles.icon }name="chevron-left" size={30} color='lime'/>
+
+<Icons name='chevron-left' size={30} color='#37af0c'onPress={() =>
+                      this.props.navigation.navigate('homescreen')
+                    }  style={styles.icon}/>
           
-</TouchableHighlight>
+
 
                  <Text style={styles.Newuser}>New User?</Text>
 
