@@ -57,7 +57,7 @@ export function NavBarCustom(props) {
         />)}
             label="My Orders"
             onPress={() => {
-              props.navigation.navigate('My Orders');
+              props.navigation.navigate('Login');
             }}
           /></Drawer.Section>
           <Drawer.Section style={{marginTop:-35}} >
@@ -80,7 +80,7 @@ export function NavBarCustom(props) {
 
             label="Wallet"
             onPress={() => {
-              props.navigation.navigate('Wallet');
+              props.navigation.navigate('Signin');
             }}
           />
           </Drawer.Section>

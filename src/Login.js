@@ -1,10 +1,11 @@
 import React,{ Component } from 'react';
-import{View,TextInput,Text,StyleSheet,ImageBackground,TouchableOpacity} from "react-native";
+import{View,TextInput,Text,StyleSheet,ImageBackground,TouchableOpacity,Dimensions} from "react-native";
 import Icon from 'react-native-vector-icons/EvilIcons';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import { color } from 'react-native-reanimated';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { DrawerActions } from '@react-navigation/native';
 
 export default class Login extends Component{
     render(){
@@ -14,7 +15,7 @@ export default class Login extends Component{
                   <View style={styles.container}></View>
                 <View style={styles.header}>
                 <ImageBackground source={require("../assets/logo.png")}
-                       style={{width:350,height:270,opacity:1.9,marginTop:0}}/>
+                       style={{ width: Dimensions.get('window').width,height:270,opacity:1.9,marginTop:0}}/>
                 </View>
                 <View style ={styles.body}>
            
@@ -86,7 +87,7 @@ const styles=StyleSheet.create({
     },
 
 inputBox: {
-    width: 350,
+    width: Dimensions.get('window').width,
     backgroundColor:'#111118',
    
     paddingHorizontal: 16,
@@ -96,7 +97,7 @@ inputBox: {
     marginVertical: 12
 },
 button: {
-    width: 320,
+    width: Dimensions.get('window').width,
     height:50,
     backgroundColor:'#21680c',
     borderRadius: 5,
@@ -104,7 +105,7 @@ button: {
     paddingVertical: 12
 },
 button1: {
-    width: 320,
+    width: Dimensions.get('window').width,
     height:50,
     backgroundColor: '#282a36',
     borderRadius: 4,

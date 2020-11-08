@@ -40,8 +40,8 @@ export default class Homescreen extends Component {
        </View>
        <View style={styles.viewstyle}>
          <View style={styles.imagebody}>
-          <Image source={require('./images/porotta.png')}
-           style={{width: 350, height: 170}}/>
+          <Image source={require('../assets/img/porotta.png')}
+           style={{width: '100%', height: 170}}/>
            <View style={styles.rate}>
              <Text style={styles.text1}>0.0</Text>
            </View>
@@ -89,6 +89,7 @@ const styles = StyleSheet.create({
   },
   cart:{
     marginLeft:25,
+    flex:1,
   },
   body:{
     height:80,

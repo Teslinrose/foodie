@@ -5,6 +5,7 @@ import { TextInput } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/Fontisto';
 import Icon2 from 'react-native-vector-icons/Entypo';
 
+
 export default class Location extends Component{
     render() {
         return (
@@ -41,13 +42,15 @@ export default class Location extends Component{
 
                 <View style={styles.body}> 
                     <Icon2 style={styles.lctnicon}name="location-pin" size={20} color='white'/>
-                    <Text onPress={() =>this.props.navigation.navigate('homescreen')}  style={styles.lctntext}>Rajapalayam</Text>
+                    <Text onPress={() =>
+                      this.props.navigation.navigate('Home')
+                    } style={styles.lctntext}>Rajapalayam</Text>
                     
                 </View>
 
                 <View style={styles.body}> 
                     <Icon2 style={styles.lctnicon}name="location-pin" size={20} color='white' />
-                    <Text onPress={() =>this.props.navigation.navigate('homescreen')} style={styles.lctntext}>Srivilliputtur</Text>
+                    <Text onPress={() =>this.props.navigation.navigate('Home')} style={styles.lctntext}>Srivilliputtur</Text>
                     
                 </View>
 

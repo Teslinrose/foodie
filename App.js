@@ -28,8 +28,8 @@ export default class app extends Component {
         }}>
           
           <Drawer.Screen name="Home" component={Homescreen}/> 
-          <Drawer.Screen name="My Orders" component={Myorders} />
-          <Drawer.Screen name="Wallet" component={Wallet} />
+          <Drawer.Screen name="My Orders" component={Login} />
+          <Drawer.Screen name="Wallet" component={Signin} />
           <Drawer.Screen name="Account" component={MY_Profile} />
           <Drawer.Screen name="Support" component={Support} />
           <Drawer.Screen name="IPL Challenge" component={IPL_Challenge} />

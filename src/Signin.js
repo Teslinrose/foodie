@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import Icon from 'react-native-vector-icons/EvilIcons';
 import Icons from 'react-native-vector-icons/MaterialIcons';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity,Dimensions } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { DrawerActions } from '@react-navigation/native';
+
  
 export default class Signin extends Component {
  
@@ -10,13 +14,13 @@ export default class Signin extends Component {
   render() {
         return(
             <View style={styles.container}>
+
+
+<Icons name='chevron-left' size={30} color='#37af0c'onPress={() =>
+                      this.props.navigation.navigate('homescreen')
+                    }  style={styles.icon}/>
           
-          <Icons 
-                 
-                 onPress={() =>
-                    this.props.navigation.navigate('Login')
-                  } 
-                 style={styles.icon }name="chevron-left" size={30} color='lime'/>
+
 
                  <Text style={styles.Newuser}>New User?</Text>
 
@@ -93,7 +97,7 @@ const styles = StyleSheet.create({
 
     },
     inputBox: {
-        width: 350,
+        width: Dimensions.get('window').width,
         backgroundColor: '#000', 
         paddingHorizontal:25,
         fontSize: 16,
@@ -105,7 +109,7 @@ const styles = StyleSheet.create({
         
     },
     button: {
-        width:'90%',
+        width: Dimensions.get('window').width,
         height:50,
         left:15,
         backgroundColor:'#21680c',

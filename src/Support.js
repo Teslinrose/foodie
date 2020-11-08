@@ -12,7 +12,7 @@ export  default class Support extends Component{
     render(){
         return(
            
-            <View>
+            <View style={styles.bodyfull}>
                 <View style={styles.header}>
                  <Icon style={styles.baricon } name='navicon' size={28} color='lime' onPress={() =>
                           this.props.navigation.dispatch(
@@ -21,7 +21,7 @@ export  default class Support extends Component{
                         }/>
                  </View>
                  <View style ={styles.body}>
-             <ScrollView style={styles.scrolldata} color='lime'>
+             <ScrollView style={styles.scrolldata} color='#37b30d'>
            
                 
                
@@ -31,10 +31,11 @@ export  default class Support extends Component{
                 <Text style={styles.subtext}>Let us know your queries & feedbacks</Text>
                 <View style={styles.viewdata}>
                 <TouchableOpacity style={styles.button}>
-                <Icons  style={styles.callicon}name="call" size={15} color='lime'/><Text style={styles.buttontext}>Call us</Text>
+                <Icons  style={styles.callicon}name="call" size={15} color='#37b30d'/>
+                <Text style={styles.buttontext}>Call us</Text>
                 </TouchableOpacity>
                 </View>
-                <Mailicons style={styles.mailicon} name="mail"  size={22} />
+                <Mailicons style={styles.mailicon} name="mail"  size={20} />
                 <Text style={styles.mailtext}> Send your message</Text>
                 
                 <TextInput style={styles.emailinput} placeholder="Email" placeholderTextColor="#818481"></TextInput>
@@ -54,6 +55,11 @@ export  default class Support extends Component{
 }
 
 const styles=StyleSheet.create({
+    bodyfull:{
+        backgroundColor:'#111118',
+        height:'100%'
+        },
+
     header:{
         backgroundColor:'#111118'
     },
@@ -97,14 +103,17 @@ const styles=StyleSheet.create({
         fontSize:15,
         backgroundColor:'#f5fffa',
         flexDirection:'row',
-        alignItems:'center',
-        marginTop:10,
-        marginLeft:20,
-        paddingRight:85,
-        paddingBottom:10,
+       alignItems:'center',
+        marginTop:15,
+        marginLeft:29,
+        paddingRight:130,
+        paddingBottom:20,
         paddingTop:10,
         marginBottom:10,
-        borderRadius:10
+        borderRadius:10,
+        justifyContent:'center',
+        alignItems:"center",
+       
         
         
     },
@@ -112,7 +121,8 @@ const styles=StyleSheet.create({
         color:'#3dff00',
         flexDirection:'row',
         marginLeft:10,
-        fontSize:18,
+        fontSize:16,
+        alignItems:"center"
         
 
     },
@@ -187,4 +197,3 @@ const styles=StyleSheet.create({
     }
 
 });
-

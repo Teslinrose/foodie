@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import Icon from 'react-native-vector-icons/EvilIcons';
 import Icons from 'react-native-vector-icons/MaterialIcons';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity,Dimensions } from 'react-native';
+import { DrawerActions } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
  
 export default class Forgot extends Component {
  
@@ -10,12 +13,15 @@ export default class Forgot extends Component {
   render() {
         return(
             <View style={styles.container}>
-                 <Icons 
+
+          
+
+<Icons name='chevron-left' size={30} color='#37af0c'onPress={() =>
+                      this.props.navigation.navigate('homescreen')
+                    }  style={styles.icon}/>
+
+
                  
-                 onPress={() =>
-                    this.props.navigation.navigate('Login')
-                  } 
-                 style={styles.icon }name="chevron-left" size={30} color='lime'/>
 
 
 
@@ -59,7 +65,7 @@ const styles = StyleSheet.create({
 
     },
     inputBox: {
-        width: 350,
+        width: Dimensions.get('window').width,
         backgroundColor: '#000', 
         paddingVertical:40,
         paddingHorizontal:15,
@@ -72,7 +78,7 @@ const styles = StyleSheet.create({
         
     },
     button: {
-        width:'90%',
+        width: Dimensions.get('window').width,
         left:15,
         backgroundColor:'#30bb00',
         borderRadius: 5,

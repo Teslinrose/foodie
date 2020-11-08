@@ -10,9 +10,9 @@ export default class MY_Profile extends Component{
         return(
 
 
-            <View>
+            <View style={styles.screen}>
                 <View style={styles.header}>
-                <Icon name='navicon' size={25} color='lime' onPress={() =>
+                <Icon style={styles.headericon} name='navicon' size={25} color='lime'  onPress={() =>
                           this.props.navigation.dispatch(
                             DrawerActions.toggleDrawer(),
                           )
@@ -21,7 +21,7 @@ export default class MY_Profile extends Component{
                 <Text style={styles.headertextl}>Logout</Text>
                 </View>
                 <View style ={styles.body}>
-                <Icons style={styles.personicon }name="perm-contact-cal" size={20} color='lime'/>
+                <Icons style={styles.personicon }name="perm-contact-cal" size={18} color='lime'/>
                 <Text style={styles.bodytext}>Personal Details</Text>
                 <Text  style={styles.textname}>Name</Text>
                 <Text  style={styles.textnamea}>Athira</Text>
@@ -39,30 +39,48 @@ export default class MY_Profile extends Component{
     }
 }
 const styles=StyleSheet.create({
+    screen:{
+        backgroundColor:'#000000',
+        width:'100%',
+        height:'100%'
+
+    },
     header:{
         backgroundColor:'#111118',
         width:'100%',
         alignItems:'center',
         height:'20%',
         flexDirection:'row',
-        justifyContent:'center'
+        justifyContent:'center',
+        marginTop:-40
+        
+        
+    },
+    headericon:{
+        flex:2,
+        paddingLeft:15,
+
     },
     headertext:{
         fontSize:18,
         color:'#f5fffa',
         padding:60,
- 
+        flex:2.7
     
     },
     headertextl:{
         color:'#00ff00',
         fontSize:18,
+        flex:2
+        
        
         
     },
     body:{
        
-        backgroundColor:'#111118'
+        backgroundColor:'#111118',
+        marginTop:-20
+        
 
     },
     personicon:{
@@ -75,7 +93,7 @@ const styles=StyleSheet.create({
     
     bodytext:{
         color:'#f5fffa',
-        fontSize:18,
+        fontSize:16,
         marginTop:-30,
         marginLeft:50,
         marginBottom:10,
@@ -85,35 +103,37 @@ const styles=StyleSheet.create({
     textname:{
     
         color:'#808080',
-        fontSize:12,
+        fontSize:11,
         marginTop:1,
         marginLeft:50,
         marginBottom:10,
     },
     textnamea:{
         color:'#f5fffa',
-        fontSize:15,
+        fontSize:14,
         marginTop:-10,
         marginLeft:50,
         marginBottom:10,
 
     },
     line:{
-        
+        borderBottomColor:'#f5fffa',
+        borderBottomWidth:1,
+        borderBottomLeftRadius:20,
         marginLeft:50,
         marginRight:10
     },
     textemail:{
     
         color:'#808080',
-        fontSize:12,
+        fontSize:11,
         marginTop:30,
         marginLeft:50,
         marginBottom:34,
     },
     textemaile:{
         color:'#f5fffa',
-        fontSize:15,
+        fontSize:14,
         marginTop:-35,
         marginLeft:50,
         marginBottom:20,
@@ -138,7 +158,7 @@ const styles=StyleSheet.create({
     },
     textnumber:{
         color:'#f5fffa',
-        fontSize:15,
+        fontSize:14,
         marginTop:-30,
         marginLeft:50,
         marginBottom:30,
